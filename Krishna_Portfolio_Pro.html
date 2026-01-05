@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Krishna Prasad R - Senior Consultant, Power Platform Architect, AI Solutions Expert | 8.5+ Years Enterprise Automation">
+    <title>Krishna Prasad R | Enterprise Automation & AI Solutions Architect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --secondary: #0ea5e9;
+            --accent: #06b6d4;
+            --highlight: #10b981;
+            --danger: #f43f5e;
+            --text-dark: #1f2937;
+            --text-light: #f3f4f6;
+            --bg-light: #ffffff;
+            --bg-secondary: #f9fafb;
+            --bg-dark: #0f172a;
+            --card-bg: #ffffff;
+            --border-light: #e5e7eb;
+            --border-dark: #1e293b;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            border-bottom: 2px solid var(--border-light);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        nav .logo-img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        nav .logo-img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        nav .logo span {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 50%, #f0fdf4 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            top: 5%;
+            right: 10%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-30px); }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: slideIn 0.8s ease-out;
+            font-weight: 700;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.1rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero-image {
+            text-align: center;
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .profile-img {
+            width: 280px;
+            height: 280px;
+            border-radius: 20px;
+            object-fit: cover;
+            border: 8px solid var(--primary);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 50px rgba(37, 99, 235, 0.4);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            margin: 2rem 0 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 35px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2.5px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-download {
+            background: linear-gradient(135deg, var(--highlight), #059669);
+            color: white;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Power Platform Tools Section */
+        .power-tools {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding: 2rem;
+        }
+
+        .tools-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tool-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            border: 2px solid var(--border-light);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .tool-badge:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+        }
+
+        .tool-icon {
+            font-size: 2.5rem;
+        }
+
+        .tool-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+            color: var(--text-dark);
+        }
+
+        /* Skills Section */
+        .skills {
+            max-width: 1200px;
+            margin: 6rem auto;
+            padding: 2rem;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            position: relative;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            margin: 1.5rem auto 0;
+            border-radius: 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, var(--bg-light), var(--bg-secondary));
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 2px solid var(--border-light);
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .skill-card:hover {
+            background: linear-gradient(135deg, var(--bg-light), #f0f9ff);
+            border-color: var(--accent);
+            transform: translateY(-12px);
+            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.15);
+        }
+
+        .skill-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .skill-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.7rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .skill-card p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Roles & Responsibilities */
+        .responsibilities {
+            max-width: 1200px;
+            margin: 6rem auto;
+            padding: 2rem;
+        }
+
+        .role-card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 2px solid var(--border-light);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .role-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .role-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border-light);
+        }
+
+        .role-icon {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .role-title {
+            flex: 1;
+        }
+
+        .role-title h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .role-date {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .responsibilities-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .responsibilities-list li {
+            padding: 0.8rem 0 0.8rem 2rem;
+            color: #374151;
+            position: relative;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .responsibilities-list li:last-child {
+            border-bottom: none;
+        }
+
+        .responsibilities-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--highlight);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Experience Section */
+        .experience {
+            max-width: 1200px;
+            margin: 6rem auto;
+            padding: 2rem;
+        }
+
+        .timeline {
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary), var(--accent));
+        }
+
+        .timeline-item {
+            margin-bottom: 4rem;
+            width: 45%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            margin-left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            margin-left: 55%;
+        }
+
+        .timeline-content {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-light);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .timeline-content:hover {
+            border-color: var(--accent);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .timeline-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .timeline-content .role {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+        }
+
+        .timeline-content .date {
+            color: var(--accent);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .timeline-content p {
+            color: #374151;
+            line-height: 1.7;
+        }
+
+        /* Certifications */
+        .certifications {
+            max-width: 1200px;
+            margin: 6rem auto;
+            padding: 3rem;
+            background: linear-gradient(135deg, #f0f9ff, #ecfdf5);
+            border-radius: 20px;
+            border: 2px solid var(--border-light);
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .cert-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .cert-card:hover {
+            border-left-color: var(--accent);
+            transform: translateX(10px) translateY(-5px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
+        }
+
+        .cert-card i {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .cert-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .cert-card p {
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            max-width: 1200px;
+            margin: 6rem auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin: 3rem 0;
+        }
+
+        .contact-item {
+            background: linear-gradient(135deg, var(--bg-light), var(--bg-secondary));
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 2px solid var(--border-light);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.15);
+        }
+
+        .contact-item i {
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .contact-item p {
+            color: #6b7280;
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            padding: 2.5rem;
+            text-align: center;
+            border-top: 2px solid var(--border-light);
+            margin-top: 6rem;
+            color: var(--text-dark);
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            font-weight: 500;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .profile-img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-item {
+                width: 100%;
+                margin-left: 40px !important;
+                text-align: left !important;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .tools-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/98adba33-3332-470a-9759-4a7f967c84e5" alt="Krishna Prasad" class="logo-img">
+                <span>KP</span>
+            </div>
+            <ul>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#responsibilities">Roles</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Krishna Prasad R</h1>
+                <p class="subtitle">Enterprise Automation & AI Solutions Architect</p>
+                <p>Senior Consultant specializing in Power Platform, AI/LLM Integration, and Business Intelligence</p>
+                <p style="font-size: 1.05rem; color: #6b7280;">8.5+ years delivering transformative enterprise solutions for Fortune 500 companies | FinTech | Healthcare | Supply Chain</p>
+                
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary"><i class="fas fa-envelope"></i> Get in Touch</a>
+                    <a href="https://linkedin.com/in/krishnaprasadramesh" target="_blank" class="btn btn-secondary"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://drive.google.com/file/d/YOUR_RESUME_LINK_HERE/view" target="_blank" class="btn btn-download"><i class="fas fa-download"></i> Resume</a>
+                </div>
+
+                <div class="social-links">
+                    <a href="mailto:krishnaprasadkp.134@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/krishnaprasadramesh" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="tel:+919535761838" title="Phone"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/98adba33-3332-470a-9759-4a7f967c84e5" alt="Krishna Prasad R" class="profile-img">
+            </div>
+        </div>
+
+        <!-- Power Platform Tools -->
+        <div class="power-tools">
+            <div class="tools-title">Core Power Platform Technologies</div>
+            <div class="tools-grid">
+                <div class="tool-badge">
+                    <div class="tool-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="tool-name">Power Automate</div>
+                </div>
+                <div class="tool-badge">
+                    <div class="tool-icon"><i class="fas fa-cube"></i></div>
+                    <div class="tool-name">Power Apps</div>
+                </div>
+                <div class="tool-badge">
+                    <div class="tool-icon"><i class="fas fa-chart-bar"></i></div>
+                    <div class="tool-name">Power BI</div>
+                </div>
+                <div class="tool-badge">
+                    <div class="tool-icon"><i class="fas fa-robot"></i></div>
+                    <div class="tool-name">Copilot Studio</div>
+                </div>
+                <div class="tool-badge">
+                    <div class="tool-icon"><i class="fas fa-database"></i></div>
+                    <div class="tool-name">Dataverse</div>
+                </div>
+                <div class="tool-badge">
+                    <div class="tool-icon"><i class="fas fa-globe"></i></div>
+                    <div class="tool-name">Power Pages</div>
+                </div>
+                <div class="tool-badge">
+                    <div class="tool-icon"><i class="fas fa-brain"></i></div>
+                    <div class="tool-name">AI Builder</div>
+                </div>
+                <div class="tool-badge">
+                    <div class="tool-icon"><i class="fas fa-layer-group"></i></div>
+                    <div class="tool-name">RPA / Bots</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roles & Responsibilities Section -->
+    <section class="responsibilities" id="responsibilities">
+        <h2 class="section-title">Key Responsibilities & Expertise</h2>
+        <p class="section-subtitle">Demonstrating leadership and technical excellence across domains</p>
+        
+        <div class="role-card">
+            <div class="role-header">
+                <div class="role-icon"><i class="fas fa-cogs"></i></div>
+                <div class="role-title">
+                    <h3>Power Platform Architecture</h3>
+                    <div class="role-date">Core Competency</div>
+                </div>
+            </div>
+            <ul class="responsibilities-list">
+                <li>Design and architect enterprise-scale Power Platform solutions (Automate, Apps, BI, Pages)</li>
+                <li>Lead implementation of cloud & desktop automation workflows with advanced logic & exception handling</li>
+                <li>Build scalable Dataverse models with custom entities, relationships, and business rules</li>
+                <li>Create intuitive Power Apps interfaces (Canvas & Model-driven) with role-based access controls</li>
+                <li>Establish governance frameworks, security standards, and compliance protocols</li>
+            </ul>
+        </div>
+
+        <div class="role-card">
+            <div class="role-header">
+                <div class="role-icon"><i class="fas fa-brain"></i></div>
+                <div class="role-title">
+                    <h3>AI & LLM Integration</h3>
+                    <div class="role-date">Emerging Tech Specialist</div>
+                </div>
+            </div>
+            <ul class="responsibilities-list">
+                <li>Architect and deploy LLM-powered solutions using OpenAI, Azure OpenAI, and Gemini</li>
+                <li>Design agentic workflows with LangChain & LangGraph for autonomous task execution</li>
+                <li>Implement Copilot Studio with M365 integrations for conversational automation</li>
+                <li>Develop prompt engineering strategies for structured outputs and multi-agent orchestration</li>
+                <li>Build document intelligence pipelines with AI Builder (OCR, classification, extraction)</li>
+            </ul>
+        </div>
+
+        <div class="role-card">
+            <div class="role-header">
+                <div class="role-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="role-title">
+                    <h3>Business Intelligence & Analytics</h3>
+                    <div class="role-date">Data Strategy Lead</div>
+                </div>
+            </div>
+            <ul class="responsibilities-list">
+                <li>Design and develop Power BI dashboards with advanced DAX calculations and semantic layers</li>
+                <li>Create automated data pipelines using Power Query, Python, and Alteryx ETL</li>
+                <li>Implement real-time monitoring dashboards for KPI tracking and executive reporting</li>
+                <li>Lead data quality frameworks and audit pipelines for compliance and accuracy</li>
+                <li>Translate complex datasets into actionable business insights through data storytelling</li>
+            </ul>
+        </div>
+
+        <div class="role-card">
+            <div class="role-header">
+                <div class="role-icon"><i class="fas fa-project-diagram"></i></div>
+                <div class="role-title">
+                    <h3>Solution Architecture & Modernization</h3>
+                    <div class="role-date">Enterprise Architecture</div>
+                </div>
+            </div>
+            <ul class="responsibilities-list">
+                <li>Lead Alteryx → Power Platform migration frameworks for legacy system modernization</li>
+                <li>Design end-to-end workflow architectures with API layers and cloud integrations</li>
+                <li>Establish F2B (Front-to-Back) automation standards and best practices</li>
+                <li>Architect multi-layer solutions combining Dataverse, Automate, Apps, and BI</li>
+                <li>Implement enterprise security, OAuth2, and API gateway patterns</li>
+            </ul>
+        </div>
+
+        <div class="role-card">
+            <div class="role-header">
+                <div class="role-icon"><i class="fas fa-users"></i></div>
+                <div class="role-title">
+                    <h3>Client Leadership & Delivery</h3>
+                    <div class="role-date">Stakeholder Management</div>
+                </div>
+            </div>
+            <ul class="responsibilities-list">
+                <li>Lead cross-functional teams across business, technical, and operations domains</li>
+                <li>Manage Fortune 500 client relationships (Deutsche Bank, Citi, GE, Flipkart, Sentara)</li>
+                <li>Drive requirements gathering and translate business needs into technical solutions</li>
+                <li>Own end-to-end delivery from design, prototyping, testing to deployment</li>
+                <li>Provide executive briefings and demonstrate ROI through measurable business outcomes</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2 class="section-title">Core Competencies</h2>
+        <p class="section-subtitle">Proven expertise across modern enterprise platforms and emerging technologies</p>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+                <h3>Power Platform</h3>
+                <p><strong>Power Automate</strong> (Cloud & Desktop) | <strong>Power Apps</strong> (Canvas & Model-driven) | <strong>Power BI</strong> (DAX, Dataflows) | <strong>Copilot Studio</strong> | <strong>Dataverse</strong></p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                <h3>AI & LLM Engineering</h3>
+                <p><strong>OpenAI</strong> | <strong>Azure OpenAI</strong> | <strong>Gemini</strong> | <strong>Prompt Engineering</strong> | <strong>Agentic Workflows</strong> | <strong>LangChain</strong> | <strong>LangGraph</strong></p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <h3>Data & Analytics</h3>
+                <p><strong>SQL</strong> (Advanced) | <strong>Python</strong> (Data Processing) | <strong>Power Query</strong> (M) | <strong>Alteryx</strong> (ETL) | <strong>Tableau</strong> | <strong>DAX</strong> | Data Modeling</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                <h3>Cloud & Architecture</h3>
+                <p><strong>Azure</strong> (Integrations) | <strong>API Design</strong> (REST, OAuth2) | <strong>Enterprise Governance</strong> | <strong>Security & Compliance</strong> | Cloud Solutioning</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>BI & Dashboards</h3>
+                <p>Interactive dashboards | Real-time monitoring | Semantic layers | Data storytelling | Performance optimization | Visualization design</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                <h3>Intelligent Automation</h3>
+                <p>Workflow orchestration | RPA & Bot automation | Document intelligence | AI Builder (OCR, classification) | Process mining | Exception handling</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <h2 class="section-title">Professional Journey</h2>
+        <p class="section-subtitle">Delivering measurable impact across diverse industries</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3><i class="fas fa-building"></i> CAPCO</h3>
+                    <div class="role">Senior Consultant – Intelligent Automation & Power Platform Architect</div>
+                    <div class="date"><i class="fas fa-calendar"></i> April 2025 – Present | FinTech</div>
+                    <p><strong>Client:</strong> Deutsche Bank | Leading enterprise-scale automation initiatives with Power Automate Cloud & Desktop, Power Apps (Canvas + Model-driven), Copilot Studio assistants, and AI Builder document intelligence systems. Architecting F2B workflows, Power Pages portals, and intelligent risk automation frameworks.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3><i class="fas fa-building"></i> WESCO</h3>
+                    <div class="role">Senior Supply Chain Analyst</div>
+                    <div class="date"><i class="fas fa-calendar"></i> May 2023 – March 2025</div>
+                    <p><strong>Impact:</strong> Reduced manual efforts by <strong>30%</strong> through Power Automate automation. Designed enterprise-wide PowerApps, established Power BI development standards, and created reusable component libraries with UI/UX teams. Awarded for innovation in supply chain analytics.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3><i class="fas fa-building"></i> FICO</h3>
+                    <div class="role">Consultant II – Data Analytics & BI</div>
+                    <div class="date"><i class="fas fa-calendar"></i> April 2022 – May 2023 | APAC Region</div>
+                    <p><strong>Clients:</strong> CBA, Citi, MCC | <strong>Achievement:</strong> Saved <strong>$120K quarterly</strong> through advanced analytics and automation. Automated APAC sales forecasting using Alteryx. Awarded Spot Award for exceptional cost-saving contributions.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3><i class="fas fa-building"></i> ZeOmega Infotech</h3>
+                    <div class="role">Product Analyst – Business Intelligence</div>
+                    <div class="date"><i class="fas fa-calendar"></i> May 2021 – April 2022</div>
+                    <p><strong>Achievement:</strong> Migrated 56 healthcare reports from SSRS to Power BI, increasing user adoption by <strong>20%</strong>. Designed interactive dashboards for healthcare analytics and operational insights.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3><i class="fas fa-building"></i> Benchmark ESG – Gensuite</h3>
+                    <div class="role">Senior Business Analyst</div>
+                    <div class="date"><i class="fas fa-calendar"></i> June 2019 – May 2021</div>
+                    <p><strong>Client:</strong> General Electric (Multiple BUs) | Recognized as application expert for training and compliance management suites. Delivered Power Platform solutions for complex enterprise requirements across Aviation, Renewables, Power, Healthcare divisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications" id="certifications">
+        <h2 class="section-title">Certifications & Recognition</h2>
+        <p class="section-subtitle">Industry-validated expertise and continuous learning</p>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <i class="fas fa-award"></i>
+                <h4>Microsoft Power BI Data Analyst</h4>
+                <p>PL-300 Certification | Advanced Data Modeling & DAX</p>
+            </div>
+            <div class="cert-card">
+                <i class="fas fa-award"></i>
+                <h4>Power Platform Solution Architect</h4>
+                <p>PL-600 & PL-900 Expert | Enterprise Architecture Design</p>
+            </div>
+            <div class="cert-card">
+                <i class="fas fa-award"></i>
+                <h4>Copilot Studio Certified</h4>
+                <p>Enterprise Copilot Development | M365 Integration</p>
+            </div>
+            <div class="cert-card">
+                <i class="fas fa-award"></i>
+                <h4>Tableau Desktop Associate</h4>
+                <p>Data Visualization & Analytics Certification</p>
+            </div>
+            <div class="cert-card">
+                <i class="fas fa-award"></i>
+                <h4>CCBA - Certified Competency</h4>
+                <p>Business Analysis & Requirements Management</p>
+            </div>
+            <div class="cert-card">
+                <i class="fas fa-award"></i>
+                <h4>Lean Six Sigma Yellow Belt</h4>
+                <p>Process Optimization & Quality Management</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Let's Collaborate</h2>
+        <p class="section-subtitle">Ready to transform your enterprise with cutting-edge automation and AI</p>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <h4>Email</h4>
+                <p><a href="mailto:krishnaprasadkp.134@gmail.com">krishnaprasadkp.134@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <h4>Phone</h4>
+                <p><a href="tel:+919535761838">+91-9535761838</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h4>Location</h4>
+                <p>Bengaluru, Karnataka, India</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Krishna Prasad R | Senior Consultant, Enterprise Automation & AI Solutions</p>
+        <p>Specializing in Power Platform, Business Intelligence, and Intelligent Automation | Hosted on GitHub Pages</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Scroll animation
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-card, .timeline-content, .cert-card, .contact-item, .role-card, .tool-badge').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
